@@ -24,7 +24,7 @@ async function start() {
         app.get('/', (req :any, res:any) => {
             return res.send('Hello World!')});
 
-        app.listen(3000,' 192.168.66.244', () => {
+        app.listen(3000, () => {
             console.log('Server running on port 3000');
         });
        
