@@ -13,11 +13,11 @@ RUN npm install
 # Copy the rest of the application code
 COPY . .
 
-# Compile TypeScript code
+# Compile TypeScript code (optional, remove if not using TypeScript)
 RUN npm run build
 
-# Expose the application port (adjust if needed)
+# Expose the application port
 EXPOSE 3000
 
-# Start the application using compiled JavaScript
+# Start the application
 CMD ["node", "dist/app.js"]
