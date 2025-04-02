@@ -1,6 +1,6 @@
 import { Document } from "mongoose";
 
-export default interface ProductModel extends Document {
+export default interface ProductModel  {
     name: string;
     description: string;
     price: number;

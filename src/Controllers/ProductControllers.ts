@@ -37,8 +37,8 @@ export async function addProduct(req: any, res: any) {
         newProduct.isDeleted = false;
         newProduct.stock = 0; // Default stock value
 
-        const result = await collection?.insertOne(newProduct.toJSON());
-        if (!result) {
+        const result = await collection?.insertOne(newProduct);
+        if (!result?.acknowledged) {
             return res.status(500).json({ message: "Failed to add product" });
         }
         return res.status(201).json(result);
